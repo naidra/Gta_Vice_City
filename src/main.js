@@ -9,7 +9,7 @@ import {
 } from "./i18n/index.js";
 
 const BASE = import.meta.env.BASE_URL;
-const GAME_ARCHIVE_URL = `${BASE}game.tar.gz`;
+const GAME_ARCHIVE_URL = "https://mega.nz/file/WcdQTLbY#ETxKBrYuTGNP85h24MP588ommgcinc7x0BBHje5fwjU";
 
 const LEGACY_SCRIPT_SOURCES = [
   `${BASE}GamepadEmulator.js`,
@@ -250,7 +250,6 @@ async function initSetupFlow() {
   }
 
   downloadLink.href = GAME_ARCHIVE_URL;
-  downloadLink.download = "game.tar.gz";
 
   const showError = (key, options) => {
     errorBox.style.display = "block";
