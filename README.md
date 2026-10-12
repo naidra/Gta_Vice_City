@@ -59,6 +59,27 @@ pnpm dev
 
 Then open `http://localhost:5173`.
 
+## Deploying to GitHub Pages
+
+Install dependencies and deploy the production build:
+
+```bash
+npm install
+npm run deploy
+```
+
+The deploy command builds the site and publishes `dist` to the `gh-pages`
+branch of the `origin` remote. Git credentials must allow pushing to
+`https://github.com/naidra/Gta_Vice_City.git`.
+
+In the repository's **Settings > Pages**, select **Deploy from a branch**,
+choose **gh-pages** and **/ (root)**, then save. The site URL is
+`https://naidra.github.io/Gta_Vice_City/`.
+
+The download button opens the MEGA archive link. The local `public/game.tar.gz`
+is excluded from the published branch because it exceeds GitHub's 100 MiB
+Git file limit. Local file imports continue to work.
+
 ## Tech stack
 
 - **Vite** — dev server and build tool
